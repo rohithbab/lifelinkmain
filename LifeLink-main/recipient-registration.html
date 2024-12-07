@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipient Registration - LifeLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/registration.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Life<span>Link</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="registration-hero">
+        <div class="container">
+            <h1>Register as an Organ Recipient</h1>
+            <p>Take the first step towards a new beginning. Our platform connects you with potential donors and provides support throughout your journey.</p>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration-form">
+        <div class="container">
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div class="step active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-text">Personal Info</span>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Medical History</span>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-text">Requirements</span>
+                </div>
+                <div class="step" data-step="4">
+                    <span class="step-number">4</span>
+                    <span class="step-text">Confirmation</span>
+                </div>
+            </div>
+
+            <form id="recipientRegistrationForm" class="multi-step-form">
+                <!-- Step 1: Personal Information -->
+                <div class="form-step active" data-step="1">
+                    <h2>Personal Information</h2>
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address *</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                </div>
+
+                <!-- Step 2: Medical History -->
+                <div class="form-step" data-step="2">
+                    <h2>Medical History</h2>
+                    <div class="form-group">
+                        <label for="bloodType">Blood Type *</label>
+                        <select id="bloodType" name="bloodType" required>
+                            <option value="">Select Blood Type</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="diagnosis">Primary Diagnosis *</label>
+                        <textarea id="diagnosis" name="diagnosis" rows="3" required 
+                            placeholder="Please describe your medical condition requiring transplantation"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="currentMedications">Current Medications *</label>
+                        <textarea id="currentMedications" name="currentMedications" rows="3" required
+                            placeholder="List all current medications and dosages"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="allergies">Allergies</label>
+                        <textarea id="allergies" name="allergies" rows="3" 
+                            placeholder="List any known allergies"></textarea>
+                    </div>
+                </div>
+
+                <!-- Step 3: Organ Requirements -->
+                <div class="form-step" data-step="3">
+                    <h2>Transplant Requirements</h2>
+                    <div class="form-group">
+                        <label>Organ(s) Needed *</label>
+                        <div class="checkbox-group organs">
+                            <label><input type="checkbox" name="organs" value="heart"> Heart</label>
+                            <label><input type="checkbox" name="organs" value="lungs"> Lungs</label>
+                            <label><input type="checkbox" name="organs" value="liver"> Liver</label>
+                            <label><input type="checkbox" name="organs" value="kidneys"> Kidneys</label>
+                            <label><input type="checkbox" name="organs" value="pancreas"> Pancreas</label>
+                            <label><input type="checkbox" name="organs" value="intestines"> Intestines</label>
+                            <label><input type="checkbox" name="organs" value="corneas"> Corneas</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="urgencyLevel">Urgency Level *</label>
+                        <select id="urgencyLevel" name="urgencyLevel" required>
+                            <option value="">Select Urgency Level</option>
+                            <option value="critical">Critical - Immediate need</option>
+                            <option value="urgent">Urgent - Within months</option>
+                            <option value="stable">Stable - Monitoring</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h3>Primary Healthcare Provider</h3>
+                        <div class="form-group">
+                            <label for="doctorName">Doctor's Name *</label>
+                            <input type="text" id="doctorName" name="doctorName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hospitalName">Hospital/Clinic Name *</label>
+                            <input type="text" id="hospitalName" name="hospitalName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="doctorPhone">Doctor's Phone *</label>
+                            <input type="tel" id="doctorPhone" name="doctorPhone" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Confirmation -->
+                <div class="form-step" data-step="4">
+                    <h2>Confirmation</h2>
+                    <div class="eligibility-checklist">
+                        <h3>Recipient Requirements</h3>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" required> I confirm that I am currently under the care of a medical professional</label>
+                            <label><input type="checkbox" required> I understand that registration does not guarantee organ availability</label>
+                            <label><input type="checkbox" required> I agree to provide updated medical information as requested</label>
+                        </div>
+                    </div>
+                    <div class="consent-section">
+                        <h3>Consent and Agreement</h3>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" required> I have read and agree to the <a href="#" class="terms-link">Terms and Conditions</a></label>
+                            <label><input type="checkbox" required> I understand that my information will be handled according to the <a href="#" class="privacy-link">Privacy Policy</a></label>
+                            <label><input type="checkbox" required> I confirm that all information provided is accurate and complete</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Navigation -->
+                <div class="form-navigation">
+                    <button type="button" class="btn-prev" style="display: none;">Previous</button>
+                    <button type="button" class="btn-next">Next</button>
+                    <button type="submit" class="btn-submit" style="display: none;">Submit Registration</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Educational Resources -->
+    <section class="educational-resources">
+        <div class="container">
+            <h2>Important Information for Recipients</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>The Matching Process</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Learn about how we match donors with recipients and the factors that influence organ compatibility.</p>
+                        <a href="#" class="learn-more">Read More</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Waiting List Information</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Understand how the waiting list works and what to expect during your waiting period.</p>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Support Resources</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Access support groups, counseling services, and other resources available to organ recipients.</p>
+                        <a href="#" class="learn-more">View Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">Life<span>Link</span></div>
+                    <p>Connecting lives through ethical and efficient organ donation.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#testimonials">Testimonials</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@lifelink.org</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LifeLink. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/registration.js"></script>
+</body>
+</html>

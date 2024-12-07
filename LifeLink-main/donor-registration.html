@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Registration - LifeLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/registration.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Life<span>Link</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="registration-hero">
+        <div class="container">
+            <h1>Become a Lifesaver</h1>
+            <p>Your decision to become an organ donor could save up to 8 lives and enhance the lives of up to 75 people. Join our community of heroes today.</p>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration-form">
+        <div class="container">
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div class="step active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-text">Personal Info</span>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Medical History</span>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-text">Preferences</span>
+                </div>
+                <div class="step" data-step="4">
+                    <span class="step-number">4</span>
+                    <span class="step-text">Confirmation</span>
+                </div>
+            </div>
+
+            <form id="donorRegistrationForm" class="multi-step-form">
+                <!-- Step 1: Personal Information -->
+                <div class="form-step active" data-step="1">
+                    <h2>Personal Information</h2>
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address *</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                </div>
+
+                <!-- Step 2: Medical History -->
+                <div class="form-step" data-step="2">
+                    <h2>Medical History</h2>
+                    <div class="form-group">
+                        <label for="bloodType">Blood Type *</label>
+                        <select id="bloodType" name="bloodType" required>
+                            <option value="">Select Blood Type</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="medicalConditions">Medical Conditions *</label>
+                        <textarea id="medicalConditions" name="medicalConditions" rows="3" required
+                            placeholder="Please list any current or past medical conditions"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="currentMedications">Current Medications *</label>
+                        <textarea id="currentMedications" name="currentMedications" rows="3" required
+                            placeholder="List all current medications and dosages"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="allergies">Allergies</label>
+                        <textarea id="allergies" name="allergies" rows="3" 
+                            placeholder="List any known allergies"></textarea>
+                    </div>
+                </div>
+
+                <!-- Step 3: Donation Preferences -->
+                <div class="form-step" data-step="3">
+                    <h2>Donation Preferences</h2>
+                    <div class="form-group">
+                        <label>Organs willing to donate: *</label>
+                        <div class="checkbox-group organs">
+                            <label><input type="checkbox" name="organs" value="heart"> Heart</label>
+                            <label><input type="checkbox" name="organs" value="lungs"> Lungs</label>
+                            <label><input type="checkbox" name="organs" value="liver"> Liver</label>
+                            <label><input type="checkbox" name="organs" value="kidneys"> Kidneys</label>
+                            <label><input type="checkbox" name="organs" value="pancreas"> Pancreas</label>
+                            <label><input type="checkbox" name="organs" value="intestines"> Intestines</label>
+                            <label><input type="checkbox" name="organs" value="corneas"> Corneas</label>
+                            <label><input type="checkbox" name="organs" value="tissue"> Tissue</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h3>Emergency Contact Information</h3>
+                        <div class="form-group">
+                            <label for="emergencyName">Emergency Contact Name *</label>
+                            <input type="text" id="emergencyName" name="emergencyName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emergencyRelation">Relationship *</label>
+                            <input type="text" id="emergencyRelation" name="emergencyRelation" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emergencyPhone">Emergency Contact Phone *</label>
+                            <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Confirmation -->
+                <div class="form-step" data-step="4">
+                    <h2>Confirmation</h2>
+                    <div class="eligibility-checklist">
+                        <h3>Donor Requirements</h3>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" required> I am 18 years of age or older</label>
+                            <label><input type="checkbox" required> I am in good general health</label>
+                            <label><input type="checkbox" required> I have not been diagnosed with HIV, active cancer, or systemic infection</label>
+                        </div>
+                    </div>
+                    <div class="consent-section">
+                        <h3>Consent and Agreement</h3>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" required> I have read and agree to the <a href="#" class="terms-link">Terms and Conditions</a></label>
+                            <label><input type="checkbox" required> I understand that my information will be handled according to the <a href="#" class="privacy-link">Privacy Policy</a></label>
+                            <label><input type="checkbox" required> I confirm that all information provided is accurate and complete</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Navigation -->
+                <div class="form-navigation">
+                    <button type="button" class="btn-prev" style="display: none;">Previous</button>
+                    <button type="button" class="btn-next">Next</button>
+                    <button type="submit" class="btn-submit" style="display: none;">Submit Registration</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Educational Resources -->
+    <section class="educational-resources">
+        <div class="container">
+            <h2>Important Information for Donors</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>The Donation Process</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Learn about how organ donation works and what to expect throughout the process.</p>
+                        <a href="#" class="learn-more">Read More</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Impact of Donation</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Understand how your decision to donate can save and improve multiple lives.</p>
+                        <a href="#" class="learn-more">Learn More</a>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Support Resources</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Access information, counseling services, and other resources available to organ donors.</p>
+                        <a href="#" class="learn-more">View Resources</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">Life<span>Link</span></div>
+                    <p>Connecting lives through ethical and efficient organ donation.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#testimonials">Testimonials</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
